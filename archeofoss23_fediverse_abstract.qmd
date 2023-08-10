@@ -17,7 +17,7 @@ Zack Batist <<z.batist@mail.utoronto.ca>>
 University of Toronto  
 ORCID: [0000-0003-0435-508X](https://orcid.org/0000-0003-0435-508X)
 
-<!-- TODO: Image -->
+![Graph visualisation of archaeo.social and adjacent Mastodon servers. Source: <https://www.comeetie.fr/galerie/mapstodon/>](archeofoss23_fediverse_abstract_image.png)
 
 ## Description
 
