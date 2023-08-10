@@ -22,21 +22,20 @@ ORCID: [0000-0003-0435-508X](https://orcid.org/0000-0003-0435-508X)
 ## Description
 
 In November 2022, the microblogging service Twitter (now [X](https://x.com)) was acquired by billionaire Elon Musk, triggering the first of several exoduses of its users.
-Amongst those who left the site for other services, new or existing—or simply stopped using it—were archaeologists and other scientists.
-'Science Twitter' was long the main venue for scholarly communication in social media, providing a platform for researchers to talk directly to each other and to the public [@CheplyginaEtAl2020].
-Its sudden disintegration was a wake-up call for many to the risks of placing public scientific discourse under the control of a single private corporation.
-This rude awakening has not been limited to Twitter.
-Recent controversial decisions by the corporate owners of the instant messaging service Slack and news aggregator Reddit, for example, have also affected academic users, leading to similar exoduses.
+Amongst those who left the site for other services, or who simply stopped using it, were archaeologists and other scientists.
+'Science Twitter' was an established venue for scholarly communication on social media, providing a platform for researchers to talk directly to each other and to the public [@CheplyginaEtAl2020].
+Its sudden disintegration was a wake-up call, highlighting the risks of entrusting public scientific discourse to a single private corporation.
+Recent controversial decisions by the corporate owners of other social media platforms like Slack and Reddit, for example, have also affected academic users, leading to similar departures.
 
-Amongst several alternatives, [Mastodon](https://joinmastodon.org) has emerged as the primary destination for scholars leaving Twitter [@Insall2023].
-Very similar to Twitter in its design and function, what distinguishes Mastodon is its social architecture:
-rather than being controlled by a single corporation, it is a decentralised network of individual servers based on free and open source software.
-Servers are 'federated' with each other using an open, W3C-standardised protocol (ActivityPub), allowing communication not just across Mastodon servers but with a wider 'Fediverse' of software using the same or compatible protocols, e.g. photo-sharing software Pixelfed, or instant messaging service Matrix.
-It presents a golden opportunity for scholars not just to replace Twitter with a clone, but bring scholarly social media back into common ownership and resist corporate capture [@BrembsEtAl2023].
+Amongst several alternatives, [Mastodon](https://joinmastodon.org) emerged as the primary destination for scholars leaving Twitter [@Insall2023].
+Mastodon is very similar to Twitter in its design and function, but rather than being controlled by a single corporation, it is a decentralised network of individual servers based on free and open source software.
+Servers 'federate' with each other using an open, W3C-standardised protocol (ActivityPub), allowing communication across Mastodon instances and a wider 'Fediverse' of interoperable services, e.g. photo-sharing software [Pixelfed](https://pixelfed.org/), or instant messaging service [Matrix](https://matrix.org/).
+The Fediverse presents a golden opportunity for scholars to reclaim ownership over the infrastructure that supports their participation on social media, and other aspects of their online experiences, too [@BrembsEtAl2023].
 
-Archaeologists are active across the Fediverse, on specialised servers such as [archaeo.social](https://archaeo.social) or [scholar.social](https://scholar.social), as well as general-purpose servers like [mastodon.social](https://mastodon.social) [@ShilobodEtAl2023].
-archaeo.social, which we created in November 2022 to encourage the use of federated social media for scholarly communication in archaeology, has X active users and an average of Y posts per day, as of August 2023.
-The aim of this panel is to critically examine the emerging community of archaeologists in the Fediverse and its place in the future of scholarly communication online.
-We invite discussion of the use and potential of decentralised/federated social media for archaeology; of risks, challenges, and critiques; and reflections on the future trajectory of archaeo.social and archaeology in the Fediverse more broadly.
+We created [archaeo.social](https://archaeo.social) in November 2022 to encourage the use of federated social media for scholarly communication in archaeology. It has X active users and an average of Y posts per day, and Z individuals who identify as archaeologists are registered across the Fediverse, as of August 2023 [@ShilobodEtAl2023].
+The aim of this panel is to critically examine this emerging community and the role of the Fediverse in the future of scholarly communication.
+We invite discussion of the use and potential of decentralised social media for archaeology; of risks, challenges, and critiques; and reflections on the future trajectory of archaeo.social and archaeology in the Fediverse more broadly.
+
+
 
 ## References
