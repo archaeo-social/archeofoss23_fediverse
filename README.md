@@ -1,5 +1,7 @@
 # archaeo.social: archaeology in the Fediverse and the future of scholarly social media
 
+[![DOI](https://zenodo.org/badge/676690367.svg)](https://zenodo.org/doi/10.5281/zenodo.10362684)
+
 ![Graph visualisation of archaeo.social and adjacent Mastodon servers. Source: <https://www.comeetie.fr/galerie/mapstodon/>](https://github.com/archaeo-social/archeofoss23_fediverse/blob/main/abstract/archeofoss23_fediverse_abstract_image.png)
 
 This repository contains files relating to a panel session at [ArcheoFOSS 2023](https://www.archeofoss.org/2023/), Turin, 12th December 2023. It includes:
