@@ -21,7 +21,7 @@ title-slide-attributes:
 ## These slides
 
 {{< bi easel3 >}} <https://archaeo-social.github.io/archeofoss23_fediverse>  
-{{< bi zenodo >}} <https://zenodo.org/doi/10.5281/zenodo.10362684>  
+{{< ai zenodo >}} <https://zenodo.org/doi/10.5281/zenodo.10362684>  
 {{< bi github >}} [archaeo-social/archeofoss23_fediverse](https://github.com/archaeo-social/archeofoss23_fediverse)
 
 ---
