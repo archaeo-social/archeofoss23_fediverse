@@ -1,5 +1,7 @@
 # archaeo.social: archaeology in the Fediverse and the future of scholarly social media
 
+![Graph visualisation of archaeo.social and adjacent Mastodon servers. Source: <https://www.comeetie.fr/galerie/mapstodon/>](https://github.com/archaeo-social/archeofoss23_fediverse/blob/main/abstract/archeofoss23_fediverse_abstract_image.png)
+
 This repository contains files relating to a panel session at [ArcheoFOSS 2023](https://www.archeofoss.org/2023/), Turin, 12th December 2023. It includes:
 
 * [Slides introducing the package](https://archaeo-social.github.io/archeofoss23_fediverse)
@@ -13,8 +15,6 @@ ORCID: [0000-0002-1011-1244](https://orcid.org/0000-0002-1011-1244)
 Zack Batist ([@zackbatist@archaeo.social](https://archaeo.social/@zackbatist)
 University of Toronto  
 ORCID: [0000-0003-0435-508X](https://orcid.org/0000-0003-0435-508X)
-
-![Graph visualisation of archaeo.social and adjacent Mastodon servers. Source: <https://www.comeetie.fr/galerie/mapstodon/>](https://github.com/archaeo-social/archeofoss23_fediverse/blob/main/abstract/archeofoss23_fediverse_abstract_image.png)
 
 ## Panel abstract
 
