@@ -4,7 +4,7 @@
 
 This repository contains files relating to a panel session at [ArcheoFOSS 2023](https://www.archeofoss.org/2023/), Turin, 12th December 2023. It includes:
 
-* [Slides introducing the package](https://archaeo-social.github.io/archeofoss23_fediverse)
+* [Slides introducing the panel](https://archaeo-social.github.io/archeofoss23_fediverse)
 
 ## Proponents
 
