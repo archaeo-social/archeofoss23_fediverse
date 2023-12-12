@@ -1,0 +1,229 @@
+---
+title: "archaeo.social"
+subtitle: "Archaeology in the Fediverse and the future of scholarly social media"
+authors:
+  - name: "Joe Roe"
+    url: "https://joeroe.io"
+    orcid: "0000-0002-1011-1244"
+  - name: "Zack Batist"
+    url: "https://zackbatist.info"
+    orcid: "0000-0003-0435-508X"
+format: 
+  revealjs:
+    theme: [default, archeofoss23_fediverse.scss]
+    logo: "figures/archaeo-social-logo.svg"
+    footer: "#ArcheoFOSS 2023"
+title-slide-attributes:
+  data-background-color: "#7c6f64"
+  data-background-image: "figures/archaeo-social-bg.png"
+---
+
+## These slides
+
+{{< bi github >}} [archaeo-social/archeofoss23_fediverse](https://github.com/archaeo-social/archeofoss23_fediverse)
+
+---
+
+## The Fediverse
+
+:::: {.columns}
+
+:::{.column}
+- Decentralised
+- Federated
+- Independent
+:::
+
+:::{.column}
+![<small>Per Axbom, <https://axbom.com/fediverse/></small>](figures/fediverse-branches-axbom-30-CC-BY-SA.png)
+:::
+
+::::
+
+:::{.notes}
+In short, the Fediverse is a (large!) collection of social media software—that tend to be, but aren't necessarily, free and open source—that are:
+
+- Decentralised: there's no single entity that controls the social network (unlike corporate social media)
+- Federated: different instances of each tool, and different tools, can talk to each other via an open standard (usually ActivityPub, but there are others)
+- Independent: even though they can communicate with each other, individual instances are fully under the control of whoever is running them, who can choose if and how they want to participate in the wider network
+
+A frequently used metaphor is email. We all have an email address, and we can all email anyone else with an email address. But there's no one Email Platform. Instead, you have an address *at* a server, which could be a company like Google, or your university, or your own domain, and those servers pass messages between each other using an open protocol. 
+
+The Fediverse is just that (very old) model, applied to social media.
+:::
+
+---
+
+## Mastodon
+
+![<https://joinmastodon.org/>](figures/archaeo-social-mastodon.png)
+
+:::{.notes}
+To see how this works from a user's perspective, which since the collapse of Twitter has become by the far the best known node of the Fediverse.
+
+Basically Mastodon looks a lot like Twitter and works in exactly the same way, most of the time. The difference is, instead of signing up at a centralised mastodon.com, you choose an independent server—so your Mastodon handle is not just e.g. "joe" but "joe *at* archaeo.social"—and access the network through that. But just like having an email address at gmail doesn't mean you can only email other people with gmail, you can interact (follow, be followed by, message, etc.) anyone and any federated server.
+:::
+
+---
+
+## The future of scholarly social media?
+
+::::{.columns}
+
+:::{.column width="60%"}
+> As with the early internet, scholarly organizations are at the forefront of developing and implementing a decentralized alternative to Twitter, Mastodon [...] demonstrating that the scholarly community is capable of creating a truly public square for scholarly discourse, impervious to private takeover [...]
+:::
+
+
+:::{.column width="40%"}
+![](figures/mastodon-over-mammon.jpg)
+<small>**Mastodon over Mammon: towards publicly owned scholarly knowledge**  
+Björn Brembs, Adrian Lenardic, Peter Murray-Rust, Leslie Chan and Dasapta Erwin Irawan  
+<https://doi.org/10.1098/rsos.230207></small>
+:::
+
+::::
+
+:::{.notes}
+But most of us that are excited about the Fediverse don't just like it because it gives us Twitter without the megalomaniac CEO.
+The idea is to build something *better*, that avoids repeating the mistakes of previous platforms and remains resilient to corporate capture in the long term.
+
+Björn Brembs and colleagues in particular have made a persuasive case that because scholarly communication is in itself a public good—and usually a publicly funded one—it belongs in common ownership, not under the control of monopolistic tech companies.
+They see in Mastodon and the Fediverse a "golden opportunity" for universities, scholarly societies and other academic bodies to achieve this.
+
+Of course, that isn't going to happen by itself – someone (us!) needs to step up and organise.
+:::
+
+---
+
+<!-- ## archaeo.social -->
+
+![<https://about.archaeo.social>](figures/archaeo-social-about.png)
+
+:::{.notes}
+That's where we come in.
+I started archaeo.social last year, in the midst of the "great migration", with the aim of providing a home for archaeologists in the Fediverse (specifically, Mastodon, at that time) and soon after Zack kindly agreed to help out.
+
+We are, or we aspire to be, a bottom-up collective providing open, federated social media services for our discipline.
+At the moment that consists of the Mastodon server, open to anyone interested in archaeology.
+And a Matrix server (basically a federated IRC, Discord, etc.) which hosts both general discussion and self-contained spaces (like Slack) for a number of societies and working groups.
+Get in touch if you're interested in hosting your group there!
+:::
+
+---
+
+<!-- ## archaeo.social -->
+
+::::{.columns}
+
+:::{.column}
+![<small><https://opencollective.com/archaeosocial></small>](figures/archaeo-social-opencollective.png)
+:::
+
+:::{.column}
+![<small><https://github.com/orgs/archaeo-social/discussions></small>](figures/archaeo-social-ideas.png)
+:::
+
+::::
+
+:::{.notes}
+We currently do all the 'behind-the-scenes' stuff on GitHub (maybe a bit of a contradiction).
+Including maintaining a community-generated list of new services we'd like to run in the future.
+The constraining factor is money: we're reliant on donations through OpenCollective, and currently the donation base isn't quite enough to support new services.
+:::
+
+---
+
+## Archaeologists in the Fediverse
+
+```{r}
+library(dplyr)
+library(readr)
+library(stringr)
+
+mastodon <- read_csv("data/archaeologists_of_mastodon_20231212.csv") |>
+  mutate(server = str_extract(`Account address`, "[^@]*$")) |>
+  filter(server != "•••••")
+```
+
+::::{.columns}
+
+:::{.column}
+[Archaeologists of Mastodon](https://stark1tty.github.io/Mastodon-Archaeology/):  
+
+- **`r nrow(mastodon)`** users
+- **`r length(unique(mastodon$server))`** servers
+:::
+
+:::{.column}
+```{r}
+mastodon |>
+  count(server) |>
+  mutate(server = if_else(n >= 10, server, "other")) |>
+  group_by(server) |>
+  summarise(n = sum(n)) |>
+  arrange(server == "other", -n) |>
+  knitr::kable()
+```
+:::
+
+::::
+
+:::{.notes}
+Lots of our colleagues are using Mastodon, especially after the "great migration" from Twitter in late 2022.
+By design it's not so easy to track exactly how many.
+Nika Shilobod's "Archaeologists of Mastodon" lists 259 users across 59 servers – but it's opt-in, so a pretty significant underestimate.
+:::
+
+---
+
+## Archaeologists in the Fediverse
+
+::::{.columns}
+
+:::{.column}
+archaeo.social:
+
+**764** users (230 active)
+
+- **46%** researchers^[Based on a random sample of 50 public profiles.]
+- **28%** early career researchers
+- **20%** organisations, bots, etc.
+- **12%** unidentifiable
+:::
+
+:::{.column}
+Languages:  
+<small>English, German, French, Spanish, Swedish, Danish, Russian, ...</small>
+
+![](figures/fedidb-total-posts-archaeosocial-chart.jpeg)
+![](figures/fedidb-user-growth-archaeosocial-chart.jpeg)
+<small><https://fedidb.org/network/instance/archaeo.social></small>
+:::
+
+::::
+
+:::{.notes}
+archaeo.social, which is targeted at archaeologists and people interested in archaeology, has 764 users (and growing) as of yesterday, 230 which are "active"
+And archaeo.social has diverse demographics (we don't systematically collect data on our users, this is just a quick estimate based on looking through a sample of people's public profiles).
+:::
+
+---
+
+## Panel discussion
+
+**Lorna-Jane Richardson**  
+Media deconvergence and digital public archaeology
+
+**María Coto-Sarmiento**  
+On the pessimistic side: Is the fediverse a viable alternative to X for Spanish researchers? 
+
+**Judit del Río, Aris Politopoulos, Colleen Morgan**  
+Making and Breaking: Anarchist Praxis, Archaeological Communities, and Social Media
+
+
+:::{.notes}
+* Today's panellists
+* We'll hold questions/discussion to the end
+:::
+
